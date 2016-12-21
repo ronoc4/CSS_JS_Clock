@@ -46,12 +46,17 @@ body {
 
 .hand {
     width: 50%;
-    height: 6px;
+    height: 10px;
     background-color: #ada3a3;
     position: absolute;
     top: 50%;
+    /*
+    This will do rotation off of x-axis on far right
+     */
     transform-origin: 100%;
     transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.11, 2.06, 0.4, 1.63);
 }
 
 /*
@@ -59,15 +64,17 @@ body {
  */
 .secondHand {
     background-color: crimson;
-    animation: time 60s infinite linear;
+    /*animation: time 60s infinite linear;*/
 }
 
 .hourHand {
-    animation: time 86400s infinite linear;
+    /*animation: time 86400s infinite linear;*/
+    width: 43%;
+    left: 6%;
 }
 
 .minuteHand {
-    animation: time 3600s infinite linear;
+    /*animation: time 3600s infinite linear;*/
 }
 
 
@@ -130,8 +137,8 @@ body {
  Needed for CSS animation, may remove once I update the Javascript
  https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
  */
-@keyframes time {
-    100% {
-        transform: rotate(360deg);
-    }
-}
+/*@keyframes time {*/
+    /*100% {*/
+        /*transform: rotate(360deg);*/
+    /*}*/
+/*}*/
