@@ -18,8 +18,11 @@ function setClock() {
         const seconds = now.getSeconds();
         const secondsDegrees = ((seconds / 60) * 360) + 90;
 
-        if (secondsDegrees == 0) {
-            secondHand.style.transition = "";
+        //Fixes animation 'twitch' issue
+        if (seconds === 0) {
+            secondHand.classList.remove('animation');
+        } else if (seconds === 1) {
+            secondHand.classList.add('animation');
         }
 
         secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
@@ -28,4 +31,6 @@ function setClock() {
     }
 
     setInterval(setDate, 1000);
+
+    setDate();
 }
