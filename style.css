@@ -54,6 +54,9 @@ body {
     transform: rotate(90deg);
 }
 
+/*
+ Animation will move the hands in the CSS, will later remove
+ */
 .secondHand {
     background-color: crimson;
     animation: time 60s infinite linear;
@@ -122,6 +125,11 @@ body {
     background-color: #ada3a3;
 }
 
+
+/*
+ Needed for CSS animation, may remove once I update the Javascript
+ https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+ */
 @keyframes time {
     100% {
         transform: rotate(360deg);
